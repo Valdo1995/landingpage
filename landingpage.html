@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>A GOOD FRUIT PAGE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="styles.css" />
+        <style>
+    
+    :root {
+    font-size: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    height: max-content;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 0;
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    box-shadow: 0 6px 31px - 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 800px) {
+    #header {
+        text-align: center;
+        height: auto;
+    }
+}
+.header-content-div {
+    max-width: 94rem;
+    width: auto;
+    margin: 0 auto;
+}
+@media(max-width: 990px) {
+    .header-content-div {
+        max-width: 74rem;
+    }
+}
+#header-img {
+    height: 5rem;
+    width: auto;
+}
+
+@media (max-width: 800px) {
+    #header-img {
+
+    }
+
+}
+
+nav {
+    position: relative;
+    top: 0.8rem;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1.5rem 0;
+}
+
+@media(max-width: 800px) {
+    nav {
+        position: static;
+        float: none;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+}
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    margin: 0.05rem ;
+    padding: 0.0.6rem;
+    transition: boder-bottom 0.2s;
+
+}
+
+@media(max-width: 475px) {
+    .nav-link {
+        margin: 0 0.2rem;
+        padding: 0 0.2rem;
+        font-size: 1.2rem;
+    }
+
+}
+.nav-link:hover{
+    color: #e23d3d;
+    border-bottom: 2px solid #e23d3d;
+}
+
+.nav-link:active {
+    color: #f84848;
+}
+
+.flexible {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home-sec {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffff;
+    text-align: start;
+    min-height: 60rem;
+    height: auto;
+    margin: 0 auto 5rem auto;
+    justify-content: start;
+    max-width: 95rem;
+    color: #333;
+}
+
+@media (max-width: 800px) {
+    .home-sec {
+        flex-flow: column wrap;
+        max-width: 100%;
+    }
+}
+
+.eye-grabber {
+    flex: 1;
+    padding: 0.2rem;
+}
+
+@media (max-width: 800px) {
+    .eye-grabber {
+        max-width: max-content;
+        padding-bottom: 8rem;
+    }
+}
+
+.eye-grabber h1 {
+    font-size: 5rem;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.eye-grabber h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #666;
+}
+
+.eye-grabber img {
+    flex: 1;
+}
+
+@media (max-width: 800px) {
+    .eye-grabber img {
+        width: 100%;
+    }
+}
+
+.eye-grabber-img img {
+    max-width: 100%;
+}
+
+.btn {
+    border: none;
+    font-size: 2rem;
+    border-radius: 0.4rem;
+    padding: 2rem;
+    background-color: #e23d3d;
+    color: #fafafa;
+    outline: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19) 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    background-color: #f84848;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+    padding: 5rem 0 5rem 0;
+    text-align: center;
+}
+
+.sec-content-div {
+    font-size: 2rem;
+    text-align: start;
+    padding: 0 2rem 5rem 2rem;
+    width: auto;
+    justify-content: space-around;
+    max-width: 95rem;
+    margin: 0 auto;
+}
+.sec-padding {
+    padding: 8rem 0 10rem 0;
+}
+#about {
+    background-color: #fafafa;
+}
+#about img {
+    max-width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 31px -2px rgba(0, 0, 0, 0.1);
+}
+#varieties {
+    background-color: #e3e3e3;
+}
+.tile{
+    background-color: #fafafa;
+    height: 40rem;
+    width: 25rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    padding: 1.5rem;
+    margin: 1.5rem;
+}
+
+@media(max-width : 670px) {
+    .tile {
+        width: auto;
+        max-width: 100%;
+        min-width: 20rem;
+        margin: 1.5rem auto;
+        height: auto;
+    }
+}
+
+.tile img {
+    width: 100%;
+    max-width: 48rem;
+    border-radius: 0.5rem;
+}
+
+.tile h4 {
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 1rem 0;
+    color: #e23d3d;
+    margin: 0;
+}
+
+.tile p {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.tile:hover{
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.19), 0 16px 16px rgba(0, 0, 0, 0.23);
+}
+#the-service {
+    background-color: #ee6f57;
+}
+
+.bars {
+    height: max-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    margin: 2rem;
+    width: 100%;
+}
+
+@media(max-width: 900px) {
+    .bars {
+        flex-flow: column wr;
+    }
+    .icon-container {
+        margin: 0 2.5rem;
+    }
+}
+
+ .bars .icon-container {
+    max-width: 10rem;
+    flex: 1;
+ }
+
+ .icon-container img {
+    max-height: 100%;
+    max-width: 100%;
+ }
+
+ .bars .txt-container {
+    flex: 2;
+    padding: 3rem;
+ }
+
+ .txt-container h5 {
+    font-size: 4rem;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .txt-container p {
+    font-size: 2.3rem;
+ }
+
+ #benefits {
+    background-color: #f84848;
+ }
+
+ #benefits iframe {
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 0.4rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.19), 0 16px 16px rgba(0, 0, 0, 0.23);
+ }
+
+ #contact {
+    background-color: #cb3737;
+    color: #fafafa;
+ }
+
+ #contact h6 {
+    font-size: 3rem;
+    font-weight: 500;
+ }
+
+ input[type="email"] {
+    border: none;
+    outline: 0;
+    font-size: 2rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 2rem;
+ }
+
+ @media(max-width: 520px) {
+    #contact h6 {
+        font-size: 2rem;
+    }
+    #contact input[type="submit"],
+    #contact input[type="email"] {
+        margin: 1rem 1rem 0 1rem;
+    }
+}
+    </style>
+    </head>
+    <body>
+        <header id="header">
+            <div class="header-content-div">
+                <a href="#home-sec">
+                    <img 
+                     src="https://static.wixstatic.com/media/58baba_7cfbda87c4b54a77a5a2f5d0a0b9cddc~mv2.jpg/v1/fill/w_480,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/58baba_7cfbda87c4b54a77a5a2f5d0a0b9cddc~mv2.jpg"
+                     alt="Dragon FRUIT"
+                     id="header-img"
+                     /></a>
+                     <nav id="nav-bar">
+                        <a href="about" class="nav-link">ABOUT</a>
+                        <a href="varierities" class="nav-link">VARIERITIES</a>
+                        <a href="service" class="nav-link">LOCATION</a>
+                        <a href="gallery" class="nav-link">GALLERY</a>
+                     </nav>
+            </div>
+        </header>
+        <main>
+            <section id="home-sec" class="flexible home-sec">
+                <div class="eye-grabber-img">
+                    <img src="https://vinut.com.vn/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/07/red-dragon-juice-drink-benefits-recipe-and-where-to-buy-64aa8e0ed22d0.png.webp"
+                    alt="JUICE DRAGON RED" />
+                </div>
+                <div class="eye-grabber-img">
+                    <h1>A Good Choose For Healthy</h1>
+                    <h2>
+                     <button class="btn" onclick="window.location.href = '#contact';">
+                        BUY NOW!
+                     </button>
+                    </div>
+            </section>
+            <section id="about" class="sec-padding">
+                <h3 class="section-heading">ABOUT</h3>
+                <div class="sec-content-div flexible">
+                 <p>
+                    RED DRAGON IT'S A MOST POPULAR FRUIT 
+                    HAVE A GOOD MANY BENEFIT FOR BODY HEALTH 
+                    SO YOU MUST TRY TO EAT FOR BETTER LIFE
+                 </p>
+                 <img src="https://media.istockphoto.com/id/2012499811/photo/a-man-hands-holding-harvested-dragon-fruits-in-wooden-crate-in-farm-a-male-gardener-working.jpg?s=612x612&w=0&k=20&c=RPdFXNFyYwa4CZqMjqQV_g0I_6Vw-M3Qi7t0SUF_LWc=.jpg"
+                 alt="man with dragon fruit" />
+                </div>
+            </section>
+            <section id="varieties" class="sec-padding">
+                <h3 class="section-heading">VARIERITIES</h3>
+                <div class="sec-content-div flexible">
+                    <div class="tile">
+                        <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/products/American_Beauty_Dragon_Friuit_4_FGT.jpg" 
+                        alt="A GOOD FRUIT" />
+                    <h4>Healthy Fruit</h4>
+                    <p>
+                        A Red Dragon Have a Many Good Nutrition 
+                        to keep your body feel good and fresh
+                    </p>
+                    </div>
+                    <div class="tile">
+                        <img src="https://static.vecteezy.com/system/resources/previews/009/043/675/non_2x/man-holding-half-of-delicious-ripe-dragon-fruit-on-white-background-photo.jpg"
+                        alt="Feel Sweet Taste"/>
+                        <p>
+                            EAT THAT AND FEEL A SWEET TASTED 
+                            WITH A COMFORT STYLE 
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section id="the-service" class="sec-padding">
+                <h3 class="section-heading">THE SERVICE</h3>
+                <div class="sec-content-div">
+                    <div class="bars">
+                        <div class="icon-container">
+                            <img src="https://i.pinimg.com/originals/a1/2f/6d/a12f6df44709e908b9e03e68e7bff6c6.png" alt="thelogo" />
+                        </div>
+                        <div class="txt-container">
+                            <h5>FRESH</h5>
+                            <p>RED DRAGON A BEST FRUIT FOR YOUR BODY</p>
+                        </div>
+                    </div>
+                    <div class="txt-container">
+                        <h5>Healthy</h5>
+                        <p>
+                            A GOOD FRUIT AND HAVE A MANY BENEFIT HEALTH 
+                            FOR THE BODY 
+                        </p>
+                    </div>
+                </div>
+                </section>
+                <section id="benefits" class="sec-padding">
+                    <h3 class="section-heading">BENEFITS</h3>
+                    <div class="sec-content-div flexible">
+                        <iframe
+                         id="video"
+                         width="500"
+                         title="Benefits a Red Dragon"
+                         height="310"
+                         src="https://www.youtube.com/watch?v=2LQSlrJj8uE"
+                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                         allowfullscreen
+                         ></iframe>
+                    </div>
+                </section>
+                <section class="sec-padding" id="contact">
+                    <h3 class="section-heading">CONTACT</h3>
+                    <div class="sec-content-div flexible">
+                        <h6>LET'S ORDER HERE</h6>
+                        <form 
+                        id="form"
+                        method="post"
+                        >
+
+                        <input 
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Your Email Here"
+                        required
+                        />
+                        <input type="submit" class="btn" id="submit" value="Okay for more" />
+                        </form>
+                    </div>
+                </section>
+        </main>
+    </body>
+</html>
+                    
+
+
+
